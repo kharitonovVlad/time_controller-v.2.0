@@ -10,8 +10,16 @@ const workSchema = new Schema({
 		type: Date,
 		required: true,
 	},
+	date: {
+		type: Date,
+		required: true,
+	},
 	action: {
 		ref: "actions",
+		type: Schema.Types.ObjectId,
+	},
+	user: {
+		ref: "users",
 		type: Schema.Types.ObjectId,
 	},
 });

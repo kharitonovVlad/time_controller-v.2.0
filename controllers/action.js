@@ -36,7 +36,7 @@ module.exports.delete = async function (req, res) {
 	try {
 		await Action.deleteOne({ _id: req.params.id });
 		res.status(200).json({
-			message: "Категория удалена.",
+			message: "Действие удалено.",
 		});
 	} catch (e) {
 		errorHandler(res, e);
